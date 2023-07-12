@@ -1,0 +1,60 @@
+.dateInput {
+  background-color: rgb(22, 28, 33);
+  border: 3px solid #1e2433;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: box-shadow 250ms;
+  font-size: 15px;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+  position: relative;
+}
+
+.dateInput:focus-within {
+  border-color: rgba(127, 225, 255, 0.15) !important;
+}
+
+.month:focus-within span,
+.month:focus-within div,
+.month:focus-within svg,
+.year:focus-within span,
+.year:focus-within div,
+.year:focus-within svg {
+  border-color: rgba(127, 225, 255, 0.433) !important;
+  color: rgb(127, 225, 255) !important;
+  fill: rgb(127, 225, 255) !important;
+}
+
+.dateInput:hover {
+  outline: 1.5px solid rgba(127, 225, 255, 0.429);
+  outline-offset: 3px;
+}
+
+.month,
+.year {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  user-select: none;
+  transition: color 250ms;
+  border-radius: 10px;
+  padding: 0px 5px 0px 5px;
+  color: #bcc1c9;
+}
+
+.month:hover,
+.year:hover,
+.month:hover div,
+.year:hover div {
+  color: rgb(127, 225, 255);
+  border-color: rgba(127, 225, 255, 0.471);
+}
+
+.month svg,
+.year svg {
+  margin-left: 5px;
+  width: 18px;
+}

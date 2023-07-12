@@ -1,0 +1,245 @@
+.container {
+  padding: 10px;
+  background-color: rgb(14, 17, 23);
+  border-bottom: 1px solid rgb(26, 31, 42);
+  border-top: 1px solid rgb(26, 31, 42);
+  width: 98%;
+  margin-top: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+
+.container::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid rgb(26, 31, 42);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid rgb(26, 31, 42);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.shortDes {
+  margin-top: 10px;
+  border-top: 1px solid rgb(26, 31, 42);
+  font-family: InterRegular;
+  color: #b4b4b5;
+  display: inline-block;
+  position: relative;
+}
+
+.shortDesText {
+  transition: all 250ms ease-in-out;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 4.5em;
+  scroll-behavior: smooth;
+  scrollbar-color: dark;
+}
+
+.imageContainer {
+  width: max-content;
+  height: max-content;
+}
+
+.imageContainer img {
+  border-radius: 5px;
+  outline-offset: 3px;
+  outline: 2px solid rgb(26, 31, 42);
+}
+
+.container a {
+  color: rgb(84, 99, 133);
+  text-decoration: none;
+}
+
+.container a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: rgba(71, 142, 201, 0.543);
+  color: rgb(95, 101, 116);
+}
+
+.container a:hover + svg {
+  color: rgb(84, 99, 133);
+  transition: color 250ms;
+}
+
+.container span:hover + svg {
+  color: rgb(220, 215, 215);
+  transition: color 250ms;
+}
+
+.imageContainer img {
+  padding: 0;
+  margin: 0;
+}
+
+.tag {
+  background-color: #25333b;
+  color: #79a1ba;
+  border: 1px solid #35464f;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  height: max-content;
+  text-transform: uppercase;
+  font-family: SourceCodeProBold;
+  margin-top: 10px;
+}
+
+.toggleButton {
+  background-color: rgb(14, 17, 23);
+  border: 1px solid rgb(25, 30, 39);
+  width: max-content;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: SourceCodeProBold;
+  font-size: 0.9em;
+  min-width: 100px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(115, 124, 142);
+  cursor: pointer;
+  transition: border-color 250ms;
+  flex-direction: row;
+}
+
+.toggleButton:hover {
+  border-color: rgb(65, 74, 90);
+}
+
+.deleteSVG {
+  fill: rgba(237, 167, 161, 0.434);
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+.deleteSVG:hover {
+  fill: rgba(237, 153, 146, 0.64);
+}
+
+.editSVG {
+  width: 25px;
+  height: 25px;
+  fill: rgba(63, 81, 181, 0.398);
+}
+.editSVG:hover {
+  fill: rgba(100, 114, 192, 0.621);
+}
+
+[data-tag="mui"].tag::before {
+  content: image-set("./assets/svg/mui.svg");
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+[data-tag="react"].tag::before {
+  content: image-set("./assets/svg/react.svg" 1x);
+  height: 20px;
+  width: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+[data-tag="react-native"].tag::before {
+  content: image-set("./assets/svg/react.svg" 1x);
+  height: 20px;
+  width: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+[data-tag="css"].tag::before {
+  content: image-set("./assets/svg/css3.svg" 1x);
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+[data-tag="html"].tag::before {
+  content: image-set("./assets/svg/html5.svg" 1x);
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+[data-tag="php"].tag::before {
+  content: image-set("./assets/svg/php.svg" 1x);
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+[data-tag="javascript"].tag::before {
+  content: image-set("./assets/svg/js.svg" 1x);
+  overflow: hidden;
+  border-radius: 2px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+[data-tag="mysql"].tag::before {
+  content: image-set("./assets/svg/mysql.svg" 1x);
+  overflow: hidden;
+  border-radius: 2px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+.toolTip {
+  background-color: rgba(47, 64, 97, 0.605);
+  padding: 5px;
+}
+
+.arrow {
+  color: rgba(47, 64, 97, 0.605);
+}
+.tagContainer {
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.tagContainer::-webkit-scrollbar {
+  width: 2px; /* width of the entire scrollbar */
+  height: 7px;
+}
+
+.tagContainer::-webkit-scrollbar-track {
+  background: rgba(39, 44, 54, 0); /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(39, 45, 58, 0.36); /* color of the scroll thumb */
+  border-radius: 10px; /* roundness of the scroll thumb */
+  border: 1px solid transparent; /* creates padding around scroll thumb */
+}

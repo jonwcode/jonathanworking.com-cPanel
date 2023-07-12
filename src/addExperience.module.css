@@ -1,0 +1,110 @@
+:root {
+  --box-shadow-color: rgb(168, 175, 193);
+}
+
+.wrapper {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgb(16, 21, 24);
+  border-color: rgba(31, 113, 235, 0.699);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.imageContainer {
+  background-color: rgb(22, 28, 33);
+  border: 3px solid rgb(30, 36, 51);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  max-width: 200px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.imageContainer img {
+  width: 193px;
+  height: 193px;
+  border-radius: 5px;
+}
+
+.title,
+.description {
+  background-color: rgb(22, 28, 33);
+  border: 3px solid #1e2433;
+  padding-left: 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: box-shadow 250ms;
+}
+
+.date {
+  background-color: rgb(22, 28, 33);
+  border: 3px solid #1e2433;
+  padding-left: 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: box-shadow 250ms;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.dateBox {
+  align-items: center;
+}
+
+.title:focus,
+.description:focus {
+  box-shadow: 0px 0px 5px 0px var(--box-shadow-color);
+}
+
+[required]::after {
+  content: "*";
+  color: rgb(127, 225, 255);
+  margin-left: 3px;
+}
+
+.description {
+  padding: 20px;
+}
+:global .Mui-focused + span {
+  transition: color 250ms;
+  color: #bcc1c9;
+}
+
+.inputError {
+  position: relative;
+}
+
+.inputError p {
+  color: #e53935;
+}
+
+.inputError input {
+  --box-shadow-color: #e53935 !important;
+}
+
+.inputError::after,
+.fileError::after {
+  content: attr(error);
+  color: #e53935;
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  right: 5px;
+}
+
+.fileError::after {
+  padding-top: 10px;
+  color: red;
+}

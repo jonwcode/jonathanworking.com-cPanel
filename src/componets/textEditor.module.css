@@ -1,0 +1,15 @@
+.editor {
+  width: 100%;
+  background-color: rgb(22, 28, 33);
+  border: 3px solid #1e2433;
+  padding-left: 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: box-shadow 250ms;
+  outline: none;
+  padding: 10px;
+}
+
+.editor:focus {
+  box-shadow: 0px 0px 5px 0px var(--box-shadow-color);
+}

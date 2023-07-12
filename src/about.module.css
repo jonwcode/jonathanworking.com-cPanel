@@ -1,0 +1,39 @@
+.inputOutline {
+  border: 3px solid rgb(30, 36, 51);
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(22, 28, 33);
+  caret-color: #ffffff;
+  color: rgba(221, 221, 221, 0.627);
+}
+
+.inputOutline:focus {
+  transition: all 500ms;
+  border-color: rgba(31, 113, 235, 0.699);
+  color: #ffffff;
+}
+
+.alertSuccess {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  transform: scale(0);
+  animation: grow 250ms forwards, shrink 250ms forwards 5s;
+}
+@keyframes shrink {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,97 @@
+body {
+  background-color: rgb(14, 17, 23);
+  scrollbar-color: dark;
+  scrollbar-gutter: stable;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 100px rgb(22, 28, 33) inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+/* IE11 (if it doesn't work, try maybe also on the parent/wrapper) */
+input[type="file"] {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("/fonts/Inter-Black.ttf");
+  format: ("ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: InterRegular;
+  src: url("/fonts/Inter-Regular.ttf");
+  format: ("ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: AcmeRegular;
+  src: url("/fonts/Acme-Regular.ttf");
+  format: ("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: SourceCodeProBold;
+  src: url("/fonts/SourceCodePro-Bold.ttf");
+  format: ("ttf");
+  font-display: swap;
+}
+
+:global(.MuiOutlinedInput-root:hover) {
+  fieldset:global(.MuiOutlinedInput-notchedOutline) {
+    border-color: black;
+  }
+
+  &:global(.Mui-focused) {
+    fieldset:global(.MuiOutlinedInput-notchedOutline) {
+      border-color: blue;
+    }
+  }
+}
+
+[contenteditable="true"]:empty:before {
+  content: attr(placeholder);
+  color: #96989a;
+  pointer-events: none;
+  float: left;
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(39, 44, 54, 0.319); /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(39, 45, 58); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid transparent; /* creates padding around scroll thumb */
+}
+/* [data-tooltip]:hover::after {
+
+}
+[data-tooltip]:hover::before {
+  content: "";
+  border: 10px solid transparent;
+  border-bottom-color: #7a2020;
+  position: absolute;
+  inset: 0 auto auto 50%;
+  transform: translate(-50%, -100%);
+} */

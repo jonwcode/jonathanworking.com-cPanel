@@ -1,0 +1,151 @@
+.toolTip {
+  background-color: rgba(47, 64, 97, 0.605);
+  padding: 5px;
+}
+
+.arrow {
+  color: rgba(47, 64, 97, 0.605);
+}
+
+.dateTime {
+  color: #dddddd;
+}
+
+.dateContainer {
+  color: #d1d1d1;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.dateContainer:hover {
+  color: #fafafa;
+}
+
+.linkContainer {
+  align-items: center;
+  width: 85%;
+}
+
+.dropDownLink {
+  transition: opacity 500ms;
+  transition-delay: 500ms;
+}
+
+.dropDownLink:hover > .subMenu {
+  transition: 500ms opacity visibility;
+  transition-delay: 500ms;
+  visibility: visible;
+  opacity: 1;
+}
+
+.subMenu {
+  opacity: 0;
+  visibility: hidden;
+  transition: 500ms opacity, visibility;
+  transition-delay: 500ms, 1000ms;
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%) translateY(100%);
+  width: max-content;
+  border-radius: 5px;
+  border: 1px solid rgb(23, 28, 36);
+  background: rgb(14, 17, 23);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.75);
+}
+
+.subMenu a {
+  display: flex;
+  flex-direction: row;
+}
+
+.subMenu svg {
+  fill: #3c3f41;
+  margin: 0px 0px 1px 5px;
+}
+
+.subMenu::before {
+  content: "";
+  border: 6px solid transparent;
+  border-bottom-color: rgb(23, 28, 36);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.dropDown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.dropMenu::after {
+  content: "";
+  border: 4px solid transparent;
+  border-top-color: rgba(219, 219, 219, 0.602);
+  position: relative;
+  top: -3px;
+  left: 4px;
+  padding: 0;
+  margin: 0;
+  height: max-content;
+  width: max-content;
+  display: inline-block;
+  font-size: 2.5em;
+  margin: 0px 0 0 3px;
+}
+
+.linkContainer a {
+  margin-right: 15px;
+  color: #b5b6b7;
+  transition: all 1s forwards;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: rgba(23, 28, 36, 0.488);
+  border: 1px solid rgb(26, 32, 42);
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.linkContainer a:hover {
+  border-color: rgba(86, 126, 172, 0.234);
+  color: #fbfbfb;
+}
+
+.toolbar {
+  background-color: rgb(13, 17, 23);
+  border-bottom: 1px solid rgb(19, 29, 43);
+}
+
+.titleContainer {
+  padding: 10px 10px 10px 30px;
+  display: inline-block;
+  width: 100%;
+  background-color: rgb(16, 19, 26);
+  border-bottom: 1px solid rgb(26, 31, 42);
+  position: relative;
+  color: #dddddd !important;
+}
+.titleContainer::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgb(3, 4, 4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* :global .MuiTooltip-tooltip {
+    background-color: #000000;
+} */

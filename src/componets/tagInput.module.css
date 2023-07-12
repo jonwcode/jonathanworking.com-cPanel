@@ -1,0 +1,146 @@
+:root {
+  --box-shadow-color: rgb(168, 175, 193);
+  --color: rgb(90, 93, 102);
+}
+
+.inputContainer {
+  padding: 3px;
+  padding-left: 5px;
+  width: 98%;
+  background-color: rgb(22, 28, 33);
+  border: 3px solid rgb(30, 36, 51);
+  cursor: text;
+  margin-top: 0px;
+  border-radius: 5px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: box-shadow 250ms;
+}
+.inputContainer[focus] {
+  box-shadow: 0px 0px 5px 0px var(--box-shadow-color);
+}
+.inputContainer[focus] + span {
+  transition: color 250ms;
+  color: var(--color);
+}
+
+.inputContainer + span {
+  color: var(--color) !important;
+}
+
+.tag {
+  background-color: #25333b;
+  color: #79a1ba;
+  border: 1px solid #35464f;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: SourceCodeProBold;
+}
+
+[data-tag="css"].tag::before {
+  content: image-set("../assets/svg/css3.svg");
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+[data-tag="mui"].tag::before {
+  content: image-set("../assets/svg/mui.svg");
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+[data-tag="react"].tag::before {
+  content: image-set("../assets/svg/react.svg");
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+[data-tag="react-native"].tag::before {
+  content: image-set("../assets/svg/react.svg");
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+[data-tag="html"].tag::before {
+  content: image-set("../assets/svg/html5.svg");
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+[data-tag="php"].tag::before {
+  content: image-set("../assets/svg/php.svg");
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+[data-tag="javascript"].tag::before {
+  content: image-set("../assets/svg/js.svg");
+  overflow: hidden;
+  border-radius: 2px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+[data-tag="mysql"].tag::before {
+  content: image-set("../assets/svg/mysql.svg");
+  overflow: hidden;
+  border-radius: 2px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+.tag svg {
+  cursor: pointer;
+  color: rgb(164, 144, 144);
+  font-size: 15px;
+}
+
+.tag svg:hover {
+  color: rgb(230, 181, 181);
+}
+
+.inputError {
+  position: relative;
+}
+
+.inputError + span {
+  --color: #e53935;
+}
+
+.inputError input {
+  --box-shadow-color: #e53935 !important;
+}
+
+.inputError::after {
+  content: attr(error);
+  padding-top: 10px;
+  color: #e53935;
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  right: 0;
+}
